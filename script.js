@@ -1,5 +1,6 @@
 const App = () => {
   const [buttonText, setButtonText] = React.useState("Click me");
+  console.log(buttonText);
 
   const onButtonClick = () => {
     setButtonText(`Hello from React ${Math.random()}`);
