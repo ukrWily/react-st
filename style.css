@@ -10,4 +10,5 @@ button{
 .green-btn{
   color: #fff;
   background-color: green;
+  border: 3px solid black;
 }

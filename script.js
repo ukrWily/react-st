@@ -1,14 +1,18 @@
-const App = () => {
+const App = (props) => {
+  console.log(props);
   const [buttonText, setButtonText] = React.useState("Click me");
-  console.log(buttonText);
+  const [buttonClass, setButtonClass] = React.useState("");
 
   const onButtonClick = () => {
     setButtonText(`Hello from React ${Math.random()}`);
+    setButtonClass("green-btn");
   };
 
   return (
     <div className="app">
-      <button onClick={onButtonClick}>{buttonText}</button>
+      <button className={buttonClass} onClick={onButtonClick}>
+        {buttonText}
+      </button>
     </div>
   );
 };
