@@ -6,9 +6,23 @@ button{
   font-size: 24px;
   padding: 10px 20px;
   border-radius: 5px;
+  transition: all 1.5s;
 }
 .green-btn{
   color: #fff;
   background-color: green;
   border: 3px solid black;
+  animation: resize 1s ease ;
+  animation: pulse 3s ease infinite;
+  text-shadow: 1px 1px 2px black;
+}
+@keyframes resize {
+  0%{transform: scale(1);}
+  50%{transform: scale(.8);}
+  100%{transform: scale(1);}
+}
+@keyframes pulse {
+  0%{  outline: 1px solid #999;}
+  50%{  outline: 7px solid #999;}
+  100%{  outline: 1px solid #999;}
 }

@@ -1,7 +1,6 @@
-const App = (props) => {
-  console.log(props);
-  const [buttonText, setButtonText] = React.useState("Click me");
-  const [buttonClass, setButtonClass] = React.useState("");
+const App = ({ initialButtonText, initialButtonClass }) => {
+  const [buttonText, setButtonText] = React.useState(initialButtonText);
+  const [buttonClass, setButtonClass] = React.useState(initialButtonClass);
 
   const onButtonClick = () => {
     setButtonText(`Hello from React ${Math.random()}`);
@@ -20,4 +19,7 @@ const App = (props) => {
 const head = <h1>Hello</h1>;
 const container = document.getElementById("app");
 const root = ReactDOM.createRoot(container);
-root.render(<App />);
+root.render(<App initialButtonText="Click me" initialButtonClass="" />);
+
+// const App = (props) => {
+//   const { initialButtonText } = props;      ===       const App = ({ initialButtonText }) => {
